@@ -21,22 +21,25 @@
             <div class="card-header text-white bg-info mb-3">
                 Current Train Schedule
             </div>
-            <div class="trainSpreadsheet">
-                <table class="trainTable">
-                    <thead>
-                        <tr>
-                            <th>Train Name</th>
-                            <th>Destination</th>
-                            <th>Frequency (min)</th>
-                            <th>Next Arrival</th>
-                            <th>Minutes Away</th>
-                        </tr>
-                    <tbody id="trainDisplay">
-                        <tr>
-                        </tr>
-                    </tbody>
-                    </thead>
-                </table>
+            <div class="card-body">
+                <div class="trainSpreadsheet">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">Train Name</th>
+                                <th scope="col">Destination</th>
+                                <th scope="col">First Train</th>
+                                <th scope="col">Frequency (min)</th>
+                                <th scope="col">Next Arrival</th>
+                                <th scope="col">Minutes Away</th>
+                            </tr>
+                        <tbody>
+                            <tr>
+                            </tr>
+                        </tbody>
+                        </thead>
+                    </table>
+                </div>
             </div>
         </div>
     </div>
@@ -61,13 +64,13 @@
                             above.</small>
                     </div>
                     <div class="form-group">
-                        <label for="firstTrainTime">Destination</label>
+                        <label for="firstTrainTime">Time of First Train</label>
                         <input type="text" class="form-control" id="firstTrainTime" placeholder="HH:mm">
                         <small id="trainTimeHelp" class="form-text text-muted">Enter military time above for first train
                             HH:mm</small>
                     </div>
                     <div class="form-group">
-                        <label for="frequencyTrain">Destination</label>
+                        <label for="frequencyTrain">Frequency of Train</label>
                         <input type="number" class="form-control" id="frequencyTrain" placeholder="min">
                         <small id="trainFreqHelp" class="form-text text-muted">Enter the frequency in minutes of each
                             train.</small>
@@ -77,26 +80,27 @@
         </div>
     </div>
     <!-- The core Firebase JS SDK is always required and must be listed first -->
-<script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-database.js"></script>
 
-<script>
-  // Your web app's Firebase configuration
-  var firebaseConfig = {
-    apiKey: "AIzaSyCrjdKs8gfu6nr5zu6qizxofVLgbR58gjo",
-    authDomain: "trainschedulerassistant.firebaseapp.com",
-    databaseURL: "https://trainschedulerassistant.firebaseio.com",
-    projectId: "trainschedulerassistant",
-    storageBucket: "trainschedulerassistant.appspot.com",
-    messagingSenderId: "685926990158",
-    appId: "1:685926990158:web:888ef0fbc4a717e0011e1f"
-  };
-  // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
-</script>
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyCrjdKs8gfu6nr5zu6qizxofVLgbR58gjo",
+            authDomain: "trainschedulerassistant.firebaseapp.com",
+            databaseURL: "https://trainschedulerassistant.firebaseio.com",
+            projectId: "trainschedulerassistant",
+            storageBucket: "trainschedulerassistant.appspot.com",
+            messagingSenderId: "685926990158",
+            appId: "1:685926990158:web:888ef0fbc4a717e0011e1f"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+    </script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
     </script>
+    <script src="https://cdn.jsdelivr.net/npm/moment@2.24.0/moment.min.js"></script>
     <script src="./assets/javascript/scheduler.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
         integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
